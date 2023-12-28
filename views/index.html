@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body> 
+  <div class="container">
+
+    <div class="topContainer">
+
+      <div id="apiKeyForm">
+        <h2>OpenAI API Key</h2>
+        <form id="apiKeyInputForm">
+          <textarea type="apiKeyInput" id="apiKeyInput" placeholder="Enter OpenAI API Key"></textarea>
+          <button type="button" id="submitAPIKeyButton" class="button" onclick="storeAPIKey(event)">Submit</button>
+        </form>
+      </div>
+
+      <div id="uploadArea">
+        <h2>Upload Document</h2>
+        <!-- Add a form for file uploads -->
+        <form id="uploadForm" enctype="multipart/form-data" >
+          <input type="file" name="fileInput" id="fileInput" accept=".txt, .pdf">
+          <button type="button" onclick="uploadFile(event)">Upload</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="outputContainer">
+      <div id="outputText"></div>
+    </div>
+
+    <div class="inputContainer">
+      <div id="inputArea">
+        <form>
+          <textarea id="textInput" placeholder="Message GPT..."></textarea>
+          <button type="button" id="getVectorsButton" class="button" onclick="getVectors()">Send</button>
+        </form>
+      </div>
+    </div>  
+
+  </div>
+
+  <script src="js/api.js"></script>
+  <script>
+    function handleKeyUp(event) {
+      if (event.keyCode === 13) {  // Check if the pressed key is Enter (key code 13)
+        getVectors();
+      }
+    }
+  </script>
+
+
+</body>
+</html>

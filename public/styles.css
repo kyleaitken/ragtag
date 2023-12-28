@@ -1,0 +1,68 @@
+.container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+h2 {
+    color: black;
+}
+
+#apiKeyInput {
+    height: 40px;
+}
+
+
+#textInput {
+    width: 600px;
+    height: 40px;
+}
+
+
+.topContainer, .inputContainer {
+    position: fixed;
+    flex-shrink: 0; /* Prevent header and footer from shrinking */
+}
+
+.topContainer {
+    top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75%;
+}
+
+.inputContainer {
+    bottom: 20px;
+    height: 10vh; /* Set fixed height (12.5% of viewport height) */
+}
+
+#apiKeyForm {
+    margin-right: 30px;
+}
+
+#apiKeyInput {
+    width: 400px;
+}
+
+#uploadArea {
+    margin-left: 30px;
+}
+
+
+#outputContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 170px; /* Adjust margin to accommodate top container */
+    margin-bottom: 150px; /* Adjust margin to accommodate bottom container */
+    padding: 20px;
+    width: 60%;
+    background-color: #f0f0f0;
+}
