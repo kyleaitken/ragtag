@@ -20,13 +20,13 @@ Follow the instructions on the [Conda website](https://docs.conda.io/projects/co
 
 2. **Create and activate Conda Environment:**
 
-```bash
-conda create --name your_environment_name python=3.10
-conda activate your_environment_name
+    ```bash
+    conda create --name your_environment_name python=3.10
+    conda activate your_environment_name
 
 3. **Install Python Dependencies:**
-conda install -c pytorch spacy pymongo numpy
-conda install -c pytorch faiss-cpu=1.7.4 mkl=2021 blas=1.0=mkl
+    conda install -c pytorch spacy pymongo numpy
+    conda install -c pytorch faiss-cpu=1.7.4 mkl=2021 blas=1.0=mkl
 
 ### Node dependencies
 
